@@ -10,6 +10,7 @@
 
 public class App {
     public static void main(String[] args) throws Exception {
+        System.out.println("Készítette: Sulan Ádám\nCsoport: SZOFT I-1-N\nKészítés dátuma: 2023-05-23");
         new MainController();
     }
 }
