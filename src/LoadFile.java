@@ -23,8 +23,7 @@ public class LoadFile {
     public static ArrayList<Employee> tryLoad() throws FileNotFoundException {
         ArrayList<Employee> employeeList = new ArrayList<>();
         File file = new File(FILE_NAME);
-        Scanner scanner = new Scanner(file, "utf-8");
-        // String firstRow = scanner.nextLine();       
+        Scanner scanner = new Scanner(file, "utf-8");      
         while(scanner.hasNext()) {
             String line = scanner.nextLine();
             String[] lineArray = line.split(":");
@@ -42,6 +41,7 @@ public class LoadFile {
             employeeList.add(emp);            
 
         }
+        scanner.close();
         return employeeList;
     }
 }
